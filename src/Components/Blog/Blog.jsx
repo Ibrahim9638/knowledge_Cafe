@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Blog = ({blog}) => {
-    const {title, cover, author_img, author,posted_date,reading_time} = blog;
+    const {title, cover, author_img, author,posted_date,reading_time, hashtags} = blog;
     return (
         <div>
             <img className='w-full my-8' src={cover} alt="" />
@@ -17,7 +17,12 @@ const Blog = ({blog}) => {
                 </div>
                 <div className='text-slate-500'>{reading_time} min read</div>
             </div>
-            <h1 className='font-bold text-4xl'>{title}</h1>
+            <h1 className='font-bold text-3xl mb-5'>{title}</h1>
+            <p>
+                {
+                    hashtags.map((hash, idx)=> <span className='text-slate-500' key={idx}> <a href=""># {hash} </a> </span>)
+                }
+            </p>
         </div>
     );
 };

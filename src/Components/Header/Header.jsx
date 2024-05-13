@@ -3,7 +3,7 @@ import profile from '../../assets/images/profile.png';
 
 const Header = () => {
     return (
-        <div className='md:flex justify-between p-3 mx-4 border-b-2 items-center'>
+        <div className='md:flex justify-between p-3 border-b-2 items-center max-w-7xl mx-auto'>
             <div>
                 <h2 className="text-4xl">Knowledge Cafe</h2>
             </div>
